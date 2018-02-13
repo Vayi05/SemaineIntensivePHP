@@ -9,11 +9,10 @@
 </head>
 <body>
 <a href="admin.php">Annuler l'ajout</a>
-<form action="doadd.php" method="post">
+<form action="doadd.php" method="post" enctype="multipart/form-data">
     <label for="marque">Marque</label> <input type="text" name="marque"><br>
     <label for="modele">Modèle</label> <input type="text" name="modele"><br>
     <label for="annee">Année</label> <input type="text" name="annee"><br>
-    <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
     <label for="img">Image</label> <input type="file" name="img"><br>
     <input type="submit" value="Ajouter">
 </form>

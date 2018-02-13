@@ -35,12 +35,12 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
     <title>Document</title>
 </head>
 <body>
-    <form action="doedit.php" method="post">
+    <form action="doedit.php" method="post" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<?=$_GET['id']?>">
         <label for="marque">Marque</label> <input type="text" name="marque" value="<?=$row['marque']?>"><br>
         <label for="modele">Modèle</label> <input type="text" name="modele" value="<?=$row['modele']?>"><br>
-        <label for="annee">Année</label> <input type="text" name="annee" value="<?=$row['annee']?>">
-        <label for="img">Image</label> <input type="file" name="img" value="img/<?=$row['annee']?>"><br>
+        <label for="annee">Année</label> <input type="text" name="annee" value="<?=$row['annee']?>"><br>
+        <label for="img">Image</label> <input type="file" name="img"><br>
         <input type="submit" value="Ajouter">
     </form>
 </body>

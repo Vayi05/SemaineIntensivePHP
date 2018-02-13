@@ -29,6 +29,7 @@ $stmt->execute();
 </head>
 <body>
     <h1>Panneau administrateur</h1>
+    <a href="add.php">Ajouter</a>
     <table>
         <tr>
             <th>Marque</th>

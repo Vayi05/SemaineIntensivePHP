@@ -35,6 +35,7 @@ $stmt->execute();
             <th>Marque</th>
             <th>Modèle</th>
             <th>Année</th>
+            <th>Img</th>
             <th>Action</th>
         </tr>
         <?php while(false !== $row = $stmt->fetch(PDO::FETCH_ASSOC)):?>
@@ -42,6 +43,7 @@ $stmt->execute();
                 <td><?=$row['marque']?></td>
                 <td><?=$row['modele']?></td>
                 <td><?=$row['annee']?></td>
+                <td><?=$row['img']?></td>
                 <td>
                     <a href="details.php?id=<?=$row['id']?>">Détails</a>
                     <a href="delete.php?id=<?=$row['id']?>">Supprimer</a>

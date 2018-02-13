@@ -11,9 +11,10 @@ CREATE TABLE voitures (
 INSERT INTO voitures
 (`marque`, `modele`, `annee`, `img`)
 VALUES
-('Fiat', '500', '', ''),
-('MGB', 'Roadster', '', ''),
-('Volkswagen', 'Combi', '', ''),
-('Porsche', '911', '', ''),
-('', 'Riviera', '', ''),
-('', '', '', '');
+('Fiat', '500', '', 'FIAT 500.jpg'),
+('MGD B', 'Roadster', '', 'MGD B ROADSTER.jpg'),
+('Volkswagen', 'Combi', '', 'VOLSKWAGEN COMBI.jpg'),
+('Porsche', '911', '', 'PORSCHE 911.jpg'),
+('Buik', 'Riviera', '', 'BUIK RIVIERA.jpg'),
+('Ferrari', '335 S', '', 'FERRARI 335 S.jpg'),
+('Rolls Royce', 'Phantom', '', 'ROLLS ROYCE PHANTOM.jpg');

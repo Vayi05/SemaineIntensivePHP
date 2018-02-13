@@ -3,18 +3,22 @@
  * Created by PhpStorm.
  * User: amaury
  * Date: 13/02/18
- * Time: 10:39
+ * Time: 14:23
  */
 if(($_POST['marque'])==="" || ($_POST['modele'])==="" || ($_POST['annee'])==="" || ($_FILES['img']['name'])==="" ) {
     header('Location:admin.php?nopostdata');
     exit;
 }
 require_once "connexion.php";
-$requete = "INSERT INTO
+$requete = "UPDATE
 `voitures`
-(`marque`, `modele`, `annee`, `img`)
-VALUES
-(:marque, :modele, :annee, :img)
+SET
+`marque`,
+`modele`,
+`annee`,
+`img`
+WHERE
+id = :id
 ;";
 
 $uploadfile='img/'.$_FILES['img']['name'];

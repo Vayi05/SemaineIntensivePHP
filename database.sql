@@ -13,18 +13,27 @@ CREATE TABLE `voitures` (
   `vendeur` VARCHAR(50) NOT NULL,
   `etat` VARCHAR(50) NOT NULL,
   `quantite` VARCHAR(2) NOT NULL,
+  `prix` VARCHAR(8) NOT NULL,
   `img` VARCHAR(50) NOT NULL,
   PRIMARY KEY(`id`)
 );
 
 
 INSERT INTO
-`ok`.`voitures` (`marque`, `modele`, `couleur`, `annee`, `gamme`, `paysdorigine`, `plaque`, `kilometrage`, `nbrPossesseur`, `vendeur`, `etat`, `quantite`, `img`)
+`ok`.`voitures` (`marque`, `modele`, `couleur`, `annee`, `gamme`, `paysdorigine`, `plaque`, `kilometrage`, `nbrPossesseur`, `vendeur`, `etat`, `quantite`, `prix`, `img`)
 VALUES
-('Fiat', '500', 'Rouge', '1968', '500-500C-595', 'france', 'AB-344-CA', '27133', '4', 'Dupont', 'occasion', '2', 'FIAT 500.jpg'),
-('MGD B', 'Roadster', 'bleu marine', '1990', 'classe C cabriolet-classe S cabriolet-SLC', 'allemagne', 'AA-725-AD', '31229', '2', 'Dunkerque', 'occasion', '1', 'MGD B ROADSTER.jpg'),
-('Volkswagen', 'Combi', 'jaune', '1947', 'polo-golf-up', 'allemagne', 'AA-123-AA', '12340', '3', 'Chapon', 'occasion', '3', 'VOLSKWAGEN COMBI.jpg'),
-('Porsche', '911', 'blanche', '1974', 'boxster-cayman-carreira', 'france', 'DE-307-SU', '21220', '3', 'Texeira', 'occasion', '1', 'PORSCHE 911.jpg'),
-('Buik', 'Riviera', 'taupe', '1977', 'century-regal-cascada', 'americain', 'AB-405-HG', '11243', '2', 'blok', 'occasion', '1', 'BUIK RIVIERA.jpg'),
-('Ferrari', '335 S', 'rouge', '1957', 'gtb-spider-lusso', 'italie', 'BL-654-LG', '7560', '1', 'Rossi', 'occasion', '2', 'FERRARI 335 S.jpg'),
-('Rolls Royce', 'Phantom', 'noir', '1975', 'camargue-corniche-shadow', 'anglais', 'AA-555-AA', '10144', '1', 'Blandford', 'occasion', '2', 'ROLLS ROYCE PHANTOM.jpg');
+('Fiat', '500', 'Rouge', '1968', '500-500C-595', 'france', 'AB-344-CA', '27133', '4', 'Dupont', 'occasion', '2', '12 000', 'FIAT 500.jpg'),
+('MGD B', 'Roadster', 'bleu marine', '1990', 'classe C cabriolet-classe S cabriolet-SLC', 'allemagne', 'AA-725-AD', '31229', '2', 'Dunkerque', 'occasion', '1', '70 000', 'MGD B ROADSTER.jpg'),
+('Volkswagen', 'Combi', 'jaune', '1947', 'polo-golf-up', 'allemagne', 'AA-123-AA', '12340', '3', 'Chapon', 'occasion', '3', '25 000', 'VOLSKWAGEN COMBI.jpg'),
+('Porsche', '911', 'blanche', '1974', 'boxster-cayman-carreira', 'france', 'DE-307-SU', '21220', '3', 'Texeira', 'occasion', '1', '60 000', 'PORSCHE 911.jpg'),
+('Buik', 'Riviera', 'taupe', '1977', 'century-regal-cascada', 'americain', 'AB-405-HG', '11243', '2', 'blok', 'occasion', '1', '150 000', 'BUIK RIVIERA.jpg'),
+('Ferrari', '335 S', 'rouge', '1957', 'gtb-spider-lusso', 'italie', 'BL-654-LG', '7560', '1', 'Rossi', 'occasion', '2', '140 000', 'FERRARI 335 S.jpg'),
+('Rolls Royce', 'Phantom', 'noir', '1975', 'camargue-corniche-shadow', 'anglais', 'AA-555-AA', '10144', '1', 'Blandford', 'occasion', '2', '230 000', 'ROLLS ROYCE PHANTOM.jpg');
+
+CREATE TABLE `pieces` (
+  `id` INT AUTO_INCREMENT NOT NULL,
+  `numserie` VARCHAR(50) NOT NULL,
+  `stock` VARCHAR(3) NOT NULL,
+  `prix` VARCHAR(5) NOT NULL,
+  PRIMARY KEY (`id`)
+);

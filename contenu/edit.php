@@ -13,10 +13,19 @@ $requete = 'SELECT
   `id`,
   `marque`,
   `modele`,
+  `couleur`,
   `annee`,
-  `img`
+  `gamme`,
+  `paysdorigine`,
+  `plaque`,
+  `kilometrage`,
+  `nbrPossesseur`,
+  `vendeur`,
+  `etat`,
+  `quantite`,
+  `prix`
   FROM
-  `voitures`
+  voitures
   WHERE
   id = :id
   ;';
@@ -39,9 +48,19 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
         <input type="hidden" name="id" value="<?=$_GET['id']?>">
         <label for="marque">Marque</label> <input type="text" name="marque" value="<?=$row['marque']?>"><br>
         <label for="modele">Modèle</label> <input type="text" name="modele" value="<?=$row['modele']?>"><br>
-        <label for="annee">Année</label> <input type="text" name="annee" value="<?=$row['annee']?>"><br>
+        <label for="couleur">Couleur</label> <input type="text" name="couleur" value="<?=$row['couleur']?>"><br>
+        <label for="annee">Année</label> <input type="number" name="annee" value="<?=$row['annee']?>"><br>
+        <label for="gamme">Gamme</label> <input type="text" name="gamme" value="<?=$row['gamme']?>"><br>
+        <label for="paysdorigine">Pays d'origine</label> <input type="text" name="paysdorigine" value="<?=$row['paysdorigine']?>"><br>
+        <label for="plaque">Plaque d'immatriculation</label> <input type="text" name="plaque" value="<?=$row['plaque']?>"><br>
+        <label for="kilometrage">Kilométrage</label> <input type="number" name="kilometrage" value="<?=$row['kilometrage']?>"><br>
+        <label for="nbrPossesseur">Nombre de possesseurs</label> <input type="number" name="nbrPossesseur" value="<?=$row['nbrPossesseur']?>"><br>
+        <label for="vendeur">Vendeur</label> <input type="text" name="vendeur" value="<?=$row['vendeur']?>"><br>
+        <label for="etat">État</label> <input type="text" name="etat" value="<?=$row['etat']?>"><br>
+        <label for="quantite">Quantité</label> <input type="number" name="quantite" value="<?=$row['quantite']?>"><br>
+        <label for="prix">Prix</label> <input type="number" name="prix" value="<?=$row['prix']?>"><br>
         <label for="img">Image</label> <input type="file" name="img"><br>
-        <input type="submit" value="Ajouter">
+        <input type="submit" value="Modifier">
     </form>
 </body>
 </html>
